@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url('../Views/images/co.jpg');
+ 	background-color: #43d1be;
+ 	background-repeat: no-repeat;
+  	background-attachment: fixed;
+}
+
+.container{
+	margin-left: 500px; 
+	font-family: "Verdana";
+}
+
+#divCustomerGrid{
+	margin-left: 250px;
+}

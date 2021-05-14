@@ -4,6 +4,8 @@ import java.sql.*;
 
 public class CustomerOrder {
 
+	//Database connection
+	
 	private Connection connect()
 	 {
 	 Connection connect = null;
@@ -116,11 +118,10 @@ public class CustomerOrder {
 		 	output += "<td>" + customerPassword + "</td>";
 	 
 		 	
-		 	output += "<td><input name='btnUpdate' type='button' value='Update' class='btn btn-secondary'></td>"
-		 			 + "<td><form method='post' action='customer.jsp'>"
-		 			 + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>"
-		 			 + "<input name='customerId' type='hidden' value='" + customerId
-		 			 + "'>" + "</form></td></tr>";
+		 	 output += "<td><input name='btnUpdate' type='button' value='Manage'" + "class='btnUpdate btn btn-secondary' data-customerId='" + customerId + "'></td>"
+		 			 + "<td><input name='btnRemove' type='button' value='Remove'" + "class='btnRemove btn btn-danger' data-customerId='" + customerId + "'></td></tr>";
+
+		 	
 	 	}
 	 
 	 	connect.close();

@@ -8,12 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Customer Registration</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
+<link rel="stylesheet" href="Views/customerOrderClnt.css">
 <script src="Components/jquery-3.6.0.min.js"></script>
 <script src="Components/customerOrder.js"></script>
 
 </head>
 <body>
-
+<center>
 <div class="container"><div class="row"><div class="col-6">
 
 	<h1>Customer Management</h1>
@@ -44,18 +45,29 @@
  		<input id="customerPassword" name="customerPassword" type="text"
  					class="form-control form-control-sm">
  		<br>
- 		<input id="btnSave" name="btnSave" type="button" value="Save"
+ 		
+ 		<input id="btnSave" name="btnSave" type="button" value="Register"
  					class="btn btn-primary">
  
- 		<input type="hidden" id="hidItemIDSave"
- 					name="hidItemIDSave" value="">
+ 		<input type="hidden" id="hidCustomerID"
+ 					name="hidCustomerID" value="">
 
+
+
+
+		<input id="btnUpdate1" name="btnUpdate1" type="button" value="Update"
+ 					class="btn btn-primary">
+ 
+			
+		
 	</form>
 		<div id="alertSuccess" class="alert alert-success"></div>
 		<div id="alertError" class="alert alert-danger"></div>
 
 	<br>
-	<div id="divItemsGrid">
+	
+</center>
+	<div id="divCustomerGrid">
  		<%
  			CustomerOrder custObj = new CustomerOrder();
  			out.print(custObj.readCustomers());
@@ -63,6 +75,5 @@
 	</div>
 
 </div> </div> </div>
-
 </body>
 </html>
